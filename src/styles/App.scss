@@ -1,0 +1,19 @@
+@import './Reset.scss';
+
+// Setup
+@import './Setup/Variables.scss';
+@import './Setup/Functions.scss';
+
+// Basics
+@import './Basics/Helpers.scss';
+@import './Basics/Layout.scss';
+@import './Basics/Buttons.scss';
+@import './Basics/Inputs.scss';
+
+//Pages
+@import './Pages/HomePage.scss';
+@import './Pages/ContactDetails.scss';
+
+
+//Components
+@import './Components/ContactPreview.scss'

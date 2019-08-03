@@ -1,0 +1,20 @@
+.contact-preview{
+    border:1px solid black;
+    background-color: lightgray;
+    margin-bottom: em(10px);
+    padding: em(5px);
+    color: black;
+    border-radius: em(100px);
+    cursor: pointer;
+    transition: .3s;
+}
+.contact-preview:hover{
+    background-color: white;
+}
+.contact-preview> .profile-img{
+    width: em(100px);
+    margin-right: em(20px);
+}
+.contact-preview> .name{
+    font-size: em(24px);
+}
