@@ -4,11 +4,10 @@ import { Sparklines, SparklinesLine } from 'react-sparklines';
 
 const Chart = (props) => {
     const { chartData } = props
-    console.log(chartData)
     return (
         chartData.length ? (
             <Sparklines data={chartData}>
-                <SparklinesLine color="orange" />
+                <SparklinesLine color={props.color} />
             </Sparklines>
         ) :
             (<h2>loading</h2>)

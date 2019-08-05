@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import UserService from '../../services/UserService.js';
-import BitcoinService from '../../services/BitcoinService.js'
-import bitcoinIcon from '../../assets/bitcoin.svg'
-import coinIcon from '../../assets/coins.svg'
+import BitcoinService from '../../services/BitcoinService.js';
+import bitcoinIcon from '../../assets/bitcoin.svg';
+import coinIcon from '../../assets/coins.svg';
+
 class HomePage extends Component {
     state = {
         user: {
@@ -11,11 +12,10 @@ class HomePage extends Component {
         },
         btcRate: null
     }
-    componentWillMount = async () => {
+    componentDidMount = async () => {
         const user = await UserService.getUser();
         let btc = await BitcoinService.getRate();
-        this.setState({ user: user });
-        this.setState({ btcRate: btc });
+        this.setState({ user: user , btcRate: btc});
     }
     render() {
         return (

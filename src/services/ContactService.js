@@ -166,6 +166,7 @@ function deleteContact(id) {
 }
 
 function _updateContact(contact) {
+  console.log("updating")
   return new Promise((resolve, reject) => { 
     const index = contacts.findIndex( c => contact._id === c._id)
     if (index !== -1) {
@@ -176,6 +177,7 @@ function _updateContact(contact) {
 }
 
 function _addContact(contact) {
+  console.log("adding")
   return new Promise((resolve, reject) => { 
     contact._id = _makeId()
     contacts.push(contact)

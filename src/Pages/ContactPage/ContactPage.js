@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import ContactList from '../../Components/ContactList/ContactList.js'
 import ContactService from '../../services/ContactService.js'
 import ContactFilter from '../../Components/ContactFilter/ContactFilter.js'
-
+import { Link } from 'react-router-dom';
 class ContactPage extends Component {
 
-  componentWillMount = async () => {
+  state = {
+    contacts: []
+  }
+  async componentDidMount() {
     const contacts = await ContactService.getContacts();
     this.setState({ contacts: contacts });
   }
@@ -15,15 +18,13 @@ class ContactPage extends Component {
     this.setState({ contacts: searchRes });
   }
 
-  state = {
-    contacts: []
-  }
 
   render() {
     return (
       <div>
         <ContactFilter onFilter={this.contactSearch} />
         <ContactList contacts={this.state.contacts} />
+        <Link to={`/contact/edit`}><button className="add-btn">+</button></Link>
       </div>
     )
   }

@@ -1,0 +1,41 @@
+.add-btn {
+  width: em(40px);
+  height: em(40px);
+  position: fixed;
+  bottom: em(20px);
+  right:em(20px);
+  border-radius: em(100px);
+  background-color: darkmagenta;
+  color: white;
+  font-size: em(29px);
+  cursor: pointer;
+  outline: none;
+  transition: .3s;
+}
+.add-btn:hover{
+    background-color: white;
+    color: darkmagenta;
+}
+
+.app-btn{
+  padding: em(20px);
+  margin-right: em(5px);
+  border:none;
+  font-size: em(16px);
+  outline: none;
+  cursor: pointer;
+}
+
+
+.default-clr{
+  background-color: green;
+  color:white;
+}
+.edit-clr{
+  background-color: orange;
+  color:white;
+}
+.clear-clr{
+  background-color: grey;
+  color:white;
+}
